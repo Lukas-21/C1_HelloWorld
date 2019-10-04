@@ -25,10 +25,14 @@ namespace Hello_World_Mecke
             Console.WriteLine("Hallo Welt von XXX");
 
             // Ausgabe Benutzer 4
+            // Jonasthan
             Console.WriteLine("marhabaan bialealam");
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
             Console.WriteLine("Colin hat einen ganz kleinen Penis")
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
             // warte bis der User eine Taste drueckt
