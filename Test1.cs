@@ -18,6 +18,7 @@ namespace Hello_World_Mecke
             Console.WriteLine("Hello World von XXX");
 
             // Ausgabe Benutzer 2
+            // Henri Henrison
             Console.WriteLine("Nǐ hǎo, shìjiè");
 
             // Ausgabe Benutzer 3
