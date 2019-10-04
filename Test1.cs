@@ -16,7 +16,11 @@ namespace Hello_World_Mecke
             // Ausgabe Benutzer 1
             // Super Heftig General
             Console.WriteLine("Hello World von XXX");
+<<<<<<< Updated upstream
 
+=======
+            
+>>>>>>> Stashed changes
             // Ausgabe Benutzer 2
             // Henri Henrison
             Console.WriteLine("Nǐ hǎo, shìjiè");
