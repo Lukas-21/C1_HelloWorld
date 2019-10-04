@@ -24,7 +24,6 @@ namespace Hello_World_Mecke
 
             // Ausgabe Benutzer 4
             Console.WriteLine("marhabaan bialealam");
-            Console.WriteLine("Colin hat einen kleinen Penis")
 
             // warte bis der User eine Taste drueckt
             Console.ReadKey();
