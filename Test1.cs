@@ -14,7 +14,11 @@ namespace Hello_World_Mecke
         static void Main(string[] args) // Hier beginnt das Hauptprogramm 
         {
             // Ausgabe Benutzer 1
+<<<<<<< Updated upstream
             4580
+=======
+            //1234
+>>>>>>> Stashed changes
             Console.WriteLine("Hello World von XXX");
 
             // Ausgabe Benutzer 2
