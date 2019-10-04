@@ -14,7 +14,7 @@ namespace Hello_World_Mecke
         static void Main(string[] args) // Hier beginnt das Hauptprogramm 
         {
             // Ausgabe Benutzer 1
-            //1234
+            // Super Heftig General
             Console.WriteLine("Hello World von XXX");
 
             // Ausgabe Benutzer 2
