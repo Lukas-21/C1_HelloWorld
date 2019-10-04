@@ -25,6 +25,10 @@ namespace Hello_World_Mecke
 
             // Ausgabe Benutzer 4
             Console.WriteLine("marhabaan bialealam");
+<<<<<<< Updated upstream
+=======
+            Console.WriteLine("Colin hat einen ganz kleinen Penis")
+>>>>>>> Stashed changes
 
             // warte bis der User eine Taste drueckt
             Console.ReadKey();
