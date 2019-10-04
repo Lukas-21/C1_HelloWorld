@@ -27,7 +27,7 @@ namespace Hello_World_Mecke
 
             // warte bis der User eine Taste drueckt
             Console.ReadKey();
-            //Brenne im ewigen Feuer der 7. Ebene der Hölle
+            //Brenne im ewigen Feuer der 7. Ebene der Hölle!!!
         } // Hier endet das Hauptprogramm
     }
 }
