@@ -33,12 +33,16 @@ namespace Hello_World_Mecke
             Console.WriteLine("marhabaan bialealam");
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
             Console.WriteLine("Colin hat einen ganz kleinen Penis")
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
+=======
+            Console.WriteLine("Brenne im ewigen Feuer der siebenten Ebene der Hölle!");
+>>>>>>> Stashed changes
             // warte bis der User eine Taste drueckt
             Console.ReadKey();
 
