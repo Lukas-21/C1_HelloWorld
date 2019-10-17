@@ -33,7 +33,7 @@ namespace ProfilRechnerMitWerkstoffauswahl
             Console.WriteLine("Bitte Nur ganze Zahlen Eingeben");
             Console.WriteLine("Bitte alle Eingaben mit Enter Bestätigen");
             Console.WriteLine();
-            Console.WriteLine("Rechteck = 1, Rohr = 2, T-Profil = 3");
+            Console.WriteLine("(1) Rechteck,(2) Rohr,(3) T-Profil");
             AuswahlProfil = Console.ReadLine();
 
             AuswahlProfilD = Convert.ToDouble(AuswahlProfil);
@@ -75,8 +75,8 @@ namespace ProfilRechnerMitWerkstoffauswahl
                 }
                 else if (true)
                 {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
+                    Console.WriteLine("(1) Werkstoff auswahl");
+                    Console.WriteLine("(2) Manuelle Eingabe der Dichte");
                     AuswahlDichte = Console.ReadLine();
 
                     AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
@@ -87,13 +87,13 @@ namespace ProfilRechnerMitWerkstoffauswahl
                         Double WerkstoffAuswahlD;
                         Console.WriteLine("Werkstoffe:");
                         Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
+                        Console.WriteLine("(1) S235");
+                        Console.WriteLine("(2) AlMg4");
+                        Console.WriteLine("(3) S355");
+                        Console.WriteLine("(4) 42CrMo4");
+                        Console.WriteLine("(5) E295");
+                        Console.WriteLine("(6) E3555");
+                        Console.WriteLine("(7) C45");
                         WerkstoffAuswahl = Console.ReadLine();
 
                         WerkstoffAuswahlD = Convert.ToDouble(WerkstoffAuswahl);
@@ -149,8 +149,8 @@ namespace ProfilRechnerMitWerkstoffauswahl
                 }
                 else if (true)
                 {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
+                    Console.WriteLine("(1) Werkstoff auswahl");
+                    Console.WriteLine("(2) Manuelle Eingabe der Dichte");
                     AuswahlDichte = Console.ReadLine();
 
                     AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
@@ -161,13 +161,13 @@ namespace ProfilRechnerMitWerkstoffauswahl
                         Double WerkstoffAuswahlD;
                         Console.WriteLine("Werkstoffe:");
                         Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
+                        Console.WriteLine("(1) S235");
+                        Console.WriteLine("(2) AlMg4");
+                        Console.WriteLine("(3) S355");
+                        Console.WriteLine("(4) 42CrMo4");
+                        Console.WriteLine("(5) E295");
+                        Console.WriteLine("(6) E3555");
+                        Console.WriteLine("(7) C45");
                         WerkstoffAuswahl = Console.ReadLine();
 
                         WerkstoffAuswahlD = Convert.ToDouble(WerkstoffAuswahl);
@@ -236,8 +236,8 @@ namespace ProfilRechnerMitWerkstoffauswahl
                 }
                 else if (true)
                 {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
+                    Console.WriteLine("(1) Werkstoff auswahl");
+                    Console.WriteLine("(2) Manuelle Eingabe der Dichte");
                     AuswahlDichte = Console.ReadLine();
 
                     AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
@@ -248,13 +248,13 @@ namespace ProfilRechnerMitWerkstoffauswahl
                         Double WerkstoffAuswahlD;
                         Console.WriteLine("Werkstoffe:");
                         Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
+                        Console.WriteLine("(1) S235");
+                        Console.WriteLine("(2) AlMg4");
+                        Console.WriteLine("(3) S355");
+                        Console.WriteLine("(4) 42CrMo4");
+                        Console.WriteLine("(5) E295");
+                        Console.WriteLine("(6) E3555");
+                        Console.WriteLine("(7) C45");
 
                         WerkstoffAuswahl = Console.ReadLine();
 
