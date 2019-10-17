@@ -33,7 +33,10 @@ namespace ProfilRechnerMitWerkstoffauswahl
             Console.WriteLine("Bitte Nur ganze Zahlen Eingeben");
             Console.WriteLine("Bitte alle Eingaben mit Enter Bestätigen");
             Console.WriteLine();
-            Console.WriteLine("(1) Rechteck,(2) Rohr,(3) T-Profil");
+            Console.WriteLine("(1) Rechteck))");
+            Console.WriteLine("(2) Rohr");
+            Console.WriteLine("(3)T-Profil");
+              
             AuswahlProfil = Console.ReadLine();
 
             AuswahlProfilD = Convert.ToDouble(AuswahlProfil);
