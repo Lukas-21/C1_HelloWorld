@@ -8,8 +8,9 @@ namespace ProfilRechnerMitWerkstoffauswahl
 {
     public static class Berechnungen
     {
-        public static void kreisRohr(Double radiusU, Double wandstaerkeU, Double laengeU, Double dichteU)
+        public static void kreisRohr(Double durchmesserU, Double wandstaerkeU, Double laengeU, Double dichteU)
         {
+            Double radiusU = durchmesserU / 2;
             Double querschnitt;
             Double volumen;
             Double gewicht;
@@ -31,8 +32,9 @@ namespace ProfilRechnerMitWerkstoffauswahl
             Console.WriteLine("Das Flaechentraegheitsmoment des Profils betraegt: " + ausgabeFest + " mm hoch 4"); //cm hoch 4 ordentlich angeben
         }
 
-        public static void kreisVoll(Double radiusU, Double laengeU, Double dichteU)
+        public static void kreisVoll(Double durchmesserU, Double laengeU, Double dichteU)
         {
+            Double radiusU = durchmesserU / 2;
             Double querschnitt;
             Double volumen;
             Double gewicht;
