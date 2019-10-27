@@ -8,7 +8,24 @@ namespace ProfilRechnerMitWerkstoffauswahl
 {
     public static class ProfilRechner
     {
-        public static String Begruessung;
+        public static String EndProgramm;
+        public static String ProfilAuswahl;
+        //Rechteck
+        public static String RechteckHoehe;
+        public static String RechteckBreite;
+        public static String ProfilLaenge;
+        public static String ProfilWandstaerke;
+        public static String FehlerWandHoehe;
+        public static String FehlerWandBreite;
+        //Rohr
+        public static String RohrDurchmesser;
+        public static String FehlerDurchmesserWand;
+        //Werkstoffe
+        public static String EinleitungWerkstoffe;
+        public static String Werkstoffe;
+        public static String Error;
+        public static String ManuelleDichte ;
+        //Helpers
         public static String n = Environment.NewLine;
         static public void Main(string[] args)
         {
@@ -42,23 +59,50 @@ namespace ProfilRechnerMitWerkstoffauswahl
             AuswahlSpracheD = Convert.ToDouble(AuswahlSprache);
 
             if (AuswahlSpracheD.Equals(1.0))
-            {
-                Begruessung = "Art des Profiles Auswählen" + n + "Bitte Nur ganze Zahlen Eingeben" +n + n + "(1) Rechteck" + n + "(2) Rohr" + n + "(3) T - Profil ";
+            {               
+                ProfilAuswahl = "Art des Profiles Auswählen" + n + "Bitte Nur ganze Zahlen Eingeben" + n + n + "(1) Rechteck" + n + "(2) Rohr" + n + "(3) T - Profil";
+                RechteckHoehe = "Rechteck Profil" + n + "Berechnung eines Rechteckprofiles" + n + "Bitte die Gewuenschte Hoehe Eingeben in mm";
+                RechteckBreite = "Bitte die Gewuenschte Breite Eingeben in mm";
+                ProfilLaenge = "Bitte die Gewuenschte Laenge Eingebenin mm";
+                ProfilWandstaerke = "Bitte die Gewuenschte Wandstaerke Eingeben in mm";
+                FehlerWandHoehe = "Falsche Eingabe" + n + "Wandstärke muss kleiner als Höhe sein";
+                FehlerWandBreite = "Falsche Eingabe" + n + "Wandstärke muss kleiner als Breite Sein";
+                EinleitungWerkstoffe = "(1) Werkstoff auswahl" + n + "(2) Manuelle eingabe der Dichte";
+                Werkstoffe = "Werkstoffe";
+                Error = "Falsche Eingabe";
+                ManuelleDichte = "Bitte die Gewuenschte Dichte Eingeben in g / cm³";
+                RohrDurchmesser = "Rohr Profil" + n + "Berechnung eines Rohrprofiles" + n + "Bitte den Gewünschten Durchmesser Eingeben in mm";
+                FehlerDurchmesserWand = "Wandstärke muss kleiner als Durchmesser sein";
+                EndProgramm = "TAste drücken zum beenden";
             }
             else if (AuswahlSpracheD.Equals(2.0))
             {
-                Begruessung = "Choose the profile" + n + n + "(1) Rectangle" + n + "(2) Pipe" + n + "(3)T-Section";
+                ProfilAuswahl = "Choose the profile" + n + n + "(1) Rectangle" + n + "(2) Pipe" + n + "(3)T-Section";
+                RechteckHoehe = "Rectangle Profile" + n + "Calculation started" + n + "Enter hight in mm";
+                RechteckBreite = "Enter width in mm";
+                ProfilLaenge = "Enter lenght in mm";
+                ProfilWandstaerke = "Enter wall thickness";
+                FehlerWandHoehe = "Error" + n + "Wall thickness must be lower then hight";
+                FehlerWandBreite = "Error" + n + "Wall thickness must be lower then width";
+                EinleitungWerkstoffe = "(1) Choose material" + n + "Manually entering  density";
+                Error = "Error";
+                Werkstoffe = "Materials";
+                ManuelleDichte = "Enter density in g/cm³";
+                RohrDurchmesser = "Pipe" + n + "Calculation started" + n + "Enter diameter in mm";
+                FehlerDurchmesserWand = "Error" + n + "Wall thickness must be lower then diameter";
+                EndProgramm = "Use any key to end";
+
             }
             else if (AuswahlSpracheD.Equals(3.0))
             {
-
+                Console.WriteLine(Error);
             }
             else
             {
-                
+                Console.WriteLine(Error);
             }
 
-            Console.WriteLine(Begruessung);
+            Console.WriteLine(ProfilAuswahl);
            
             AuswahlProfil = Console.ReadLine();
 
@@ -67,19 +111,16 @@ namespace ProfilRechnerMitWerkstoffauswahl
 
             if (AuswahlProfilD.Equals(1.0))
             {
-                Console.WriteLine("Rechteck Profil");
-                Console.WriteLine("Berechnung eines Rechteckprofiles");
-
-                Console.WriteLine("Bitte die Gewuenschte Hoehe Eingeben in cm");
+                Console.WriteLine(RechteckHoehe);             
                 Hoehe = Console.ReadLine();
 
-                Console.WriteLine("Bitte die Gewuenschte Breite Eingebenin cm");
+                Console.WriteLine(RechteckBreite);
                 Breite = Console.ReadLine();
 
-                Console.WriteLine("Bitte die Gewuenschte Laenge Eingebenin cm");
+                Console.WriteLine(ProfilLaenge);
                 Laenge = Console.ReadLine();
 
-                Console.WriteLine("Bitte die Gewuenschte Wandstaerke Eingeben in cm");
+                Console.WriteLine(ProfilWandstaerke);
                 Wandstaerke = Console.ReadLine();
                 Console.WriteLine();
 
@@ -90,36 +131,31 @@ namespace ProfilRechnerMitWerkstoffauswahl
 
                 if (WandstaerkeD.Equals(HoeheD))
                 {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Wandstärke muss kleiner als Höhe Sein");
-
+                    Console.WriteLine(FehlerWandHoehe);
                 }
                 else if (WandstaerkeD.Equals(BreiteD))
                 {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Wandstärke muss kleiner als Breite Sein");
+                    Console.WriteLine(FehlerWandBreite);                
                 }
-                else if (true)
+                else 
                 {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
+                    Console.WriteLine(EinleitungWerkstoffe);                    
                     AuswahlDichte = Console.ReadLine();
-
                     AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
 
                     if (AuswahlDichteD.Equals(1.0))
                     {
                         String WerkstoffAuswahl;
                         Double WerkstoffAuswahlD;
-                        Console.WriteLine("Werkstoffe:");
+                        Console.WriteLine(Werkstoffe);
                         Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
+                        Console.WriteLine("(1) S235");
+                        Console.WriteLine("(2) AlMg4");
+                        Console.WriteLine("(4) S355");
+                        Console.WriteLine("(5) 42CrMo4");
+                        Console.WriteLine("(6) E295");
+                        Console.WriteLine("(7) E355");
+                        Console.WriteLine("(8) C45");
                         WerkstoffAuswahl = Console.ReadLine();
 
                         WerkstoffAuswahlD = Convert.ToDouble(WerkstoffAuswahl);
@@ -132,7 +168,7 @@ namespace ProfilRechnerMitWerkstoffauswahl
                     }
                     else if (AuswahlDichteD.Equals(2.0))
                     {
-                        Console.WriteLine("Bitte die Gewuenschte Dichte Eingeben in g/cm³");
+                        Console.WriteLine(ManuelleDichte);
                         Dichte = Console.ReadLine();
 
                         DichteD = Convert.ToDouble(Dichte);
@@ -145,23 +181,20 @@ namespace ProfilRechnerMitWerkstoffauswahl
                     }
                     else if (true)
                     {
-                        Console.WriteLine("Falsche eingabe");
+                        Console.WriteLine(Error);
                     }
                 }            
 
             }
             else if (AuswahlProfilD.Equals(2.0))
             {
-                Console.WriteLine("Rohr Profil");
-                Console.WriteLine("Berechnung eines Rohrprofiles");
-
-                Console.WriteLine("Bitte den Gewünschten Durchmesser Eingeben in cm");
+                Console.WriteLine(RohrDurchmesser);
                 Durchmesser = Console.ReadLine();
 
-                Console.WriteLine("Bitte  die Gewünschte Länge Eingeben in cm");
+                Console.WriteLine(ProfilLaenge);
                 Laenge = Console.ReadLine();
 
-                Console.WriteLine("Bitte die Gewünschte Wandstaerke Eingeben in cm");
+                Console.WriteLine(ProfilWandstaerke);
                 Wandstaerke = Console.ReadLine();
                 Console.WriteLine();
 
@@ -171,12 +204,12 @@ namespace ProfilRechnerMitWerkstoffauswahl
 
                 if (WandstaerkeD.Equals(DurchmesserD))
                 {
-                    Console.WriteLine("Falsche Eingabe");
+                    Console.WriteLine(FehlerDurchmesserWand);
                 }
-                else if (true)
+                else
                 {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
+
+                    Console.WriteLine(EinleitungWerkstoffe);
                     AuswahlDichte = Console.ReadLine();
 
                     AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
@@ -185,15 +218,15 @@ namespace ProfilRechnerMitWerkstoffauswahl
                     {
                         String WerkstoffAuswahl;
                         Double WerkstoffAuswahlD;
-                        Console.WriteLine("Werkstoffe:");
+                        Console.WriteLine(Werkstoffe);
                         Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
+                        Console.WriteLine("(1) S235");
+                        Console.WriteLine("(2) AlMg4");
+                        Console.WriteLine("(4) S355");
+                        Console.WriteLine("(5) 42CrMo4");
+                        Console.WriteLine("(6) E295");
+                        Console.WriteLine("(7) E355");
+                        Console.WriteLine("(8) C45");
                         WerkstoffAuswahl = Console.ReadLine();
 
                         WerkstoffAuswahlD = Convert.ToDouble(WerkstoffAuswahl);
@@ -204,116 +237,23 @@ namespace ProfilRechnerMitWerkstoffauswahl
                     }
                     else if (AuswahlDichteD.Equals(2.0))
                     {
-                        Console.WriteLine("Bitte die Gewuenschte Dichte Eingeben in g/cm³");
+                        Console.WriteLine(ManuelleDichte);
                         Dichte = Console.ReadLine();
 
                         DichteD = Convert.ToDouble(Dichte);
 
                         Berechnungen.Rohr(DurchmesserD, LaengeD, WandstaerkeD, DichteD);
                     }
-                    else if (true)
+                    else 
                     {
-                        Console.WriteLine("Falsche eingabe");
-                        Console.WriteLine("Wandstärke muss kleiner als Durchmesser sein");
+                        Console.WriteLine(Error);
+                       
                     }
-
                 }
-
-               
-              
-
-
-
             }
-            else if (AuswahlProfilD.Equals(3.0))
+           
 
-            {
-                Console.WriteLine("T-Profil");
-                Console.WriteLine("Berchnung eines T-Profils");
-
-                Console.WriteLine("Bitte Breite eingeben in cm");
-                Breite = Console.ReadLine();
-
-                Console.WriteLine("Bitte Höhe eingeben in cm");
-                Hoehe = Console.ReadLine();
-
-                Console.WriteLine("Bitte Wandstärke eingebenin cm");
-                Wandstaerke = Console.ReadLine();
-
-                Console.WriteLine("Bitte Länge eingeben in cm");
-                Laenge = Console.ReadLine();
-                Console.WriteLine();
-
-                WandstaerkeD = Convert.ToDouble(Wandstaerke);
-                HoeheD = Convert.ToDouble(Hoehe);
-                BreiteD = Convert.ToDouble(Breite);
-                LaengeD = Convert.ToDouble(Laenge);
-
-                if (WandstaerkeD.Equals(HoeheD))
-                {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Wandstärke muss kleiner als Höhe Sein");
-
-                }
-                else if (WandstaerkeD.Equals(BreiteD))
-                {
-                    Console.WriteLine("Falsche Eingabe");
-                    Console.WriteLine("Wandstärke muss kleiner als Breite Sein");
-                }
-                else if (true)
-                {
-                    Console.WriteLine("Werkstoff auswahl = 1");
-                    Console.WriteLine("Manuelle Eingabe der Dichte = 2");
-                    AuswahlDichte = Console.ReadLine();
-
-                    AuswahlDichteD = Convert.ToDouble(AuswahlDichte);
-
-                    if (AuswahlDichteD.Equals(1.0))
-                    {
-                        String WerkstoffAuswahl;
-                        Double WerkstoffAuswahlD;
-                        Console.WriteLine("Werkstoffe:");
-                        Console.WriteLine();
-                        Console.WriteLine("S235     =1");
-                        Console.WriteLine("AlMg4    =2");
-                        Console.WriteLine("S355     =3");
-                        Console.WriteLine("42CrMo4  =4");
-                        Console.WriteLine("E295     =5");
-                        Console.WriteLine("E355     =6");
-                        Console.WriteLine("C45      =7");
-
-                        WerkstoffAuswahl = Console.ReadLine();
-
-                        WerkstoffAuswahlD = Convert.ToDouble(WerkstoffAuswahl);
-
-                        DichteD = WerkstoffSammlung.Werkstoffe(WerkstoffAuswahlD);
-
-
-                        Berechnungen.Rechteck(HoeheD, BreiteD, LaengeD, WandstaerkeD, DichteD);
-
-                    }
-                    else if (AuswahlDichteD.Equals(2.0))
-                    {
-                        Console.WriteLine("Bitte die Gewuenschte Dichte Eingeben in g/cm³");
-                        Dichte = Console.ReadLine();
-
-                        DichteD = Convert.ToDouble(Dichte);
-                        HoeheD = Convert.ToDouble(Hoehe);
-                        BreiteD = Convert.ToDouble(Breite);
-                        LaengeD = Convert.ToDouble(Laenge);
-                        WandstaerkeD = Convert.ToDouble(Wandstaerke);
-
-                        Berechnungen.Rechteck(HoeheD, BreiteD, LaengeD, WandstaerkeD, DichteD);
-                    }
-                    else if (true)
-                    {
-                        Console.WriteLine("Falsche eingabe");
-                    }
-                }
-
-            }           
-
-            Console.WriteLine("Taste drücken zum beenden");
+            Console.WriteLine(EndProgramm);
             Console.ReadKey();
 
         }
