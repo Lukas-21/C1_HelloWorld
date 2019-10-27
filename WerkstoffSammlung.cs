@@ -11,7 +11,7 @@ namespace ProfilRechnerMitWerkstoffauswahl
         public static Double Werkstoffe(Double WerkstoffNummer)
         {
             Double WerkstoffDichte;
-
+            String b = ProfilRechner.Begruessung;
             if (WerkstoffNummer.Equals(1.0))
             {
                 //S253
