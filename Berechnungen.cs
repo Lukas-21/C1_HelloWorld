@@ -10,16 +10,15 @@ namespace ProfilRechnerMitWerkstoffauswahl
     {
         public static void kreisRohr(Double durchmesserU, Double wandstaerkeU, Double laengeU, Double dichteU)
         {
-            Double radiusU = durchmesserU / 2;
             Double querschnitt;
             Double volumen;
             Double gewicht;
             Double festigkeit;
 
-            querschnitt = Math.Pow(radiusU, 2) * Math.PI - Math.Pow((radiusU - wandstaerkeU), 2) * Math.PI;
+            querschnitt = (Math.Pow(durchmesserU, 2) - Math.Pow((durchmesserU - 2 * wandstaerkeU), 2)) * Math.PI / 4;
             volumen = querschnitt * laengeU;
             gewicht = volumen * dichteU;
-            festigkeit = (Math.PI * (Math.Pow((2 * radiusU), 4) - Math.Pow((2 * (radiusU - wandstaerkeU)), 4))) / 64;
+            festigkeit = (Math.PI * (Math.Pow((durchmesserU), 4) - Math.Pow((durchmesserU - ( 2 * wandstaerkeU)), 4))) / 64;
 
             String ausgabeQuersch = String.Format("{0:0,000}", querschnitt);
             String ausgabeVol = String.Format("{0:0,000}", volumen);
@@ -34,16 +33,15 @@ namespace ProfilRechnerMitWerkstoffauswahl
 
         public static void kreisVoll(Double durchmesserU, Double laengeU, Double dichteU)
         {
-            Double radiusU = durchmesserU / 2;
             Double querschnitt;
             Double volumen;
             Double gewicht;
             Double festigkeit;
 
-            querschnitt = Math.Pow(radiusU, 2) * Math.PI;
+            querschnitt = (Math.Pow(durchmesserU, 2) * Math.PI) / 4;
             volumen = querschnitt * laengeU;
             gewicht = volumen * dichteU;
-            festigkeit = (Math.PI * (Math.Pow((2 * radiusU), 4))) / 64;
+            festigkeit = (Math.PI * (Math.Pow(durchmesserU, 4))) / 64;
 
             String ausgabeQuersch = String.Format("{0:0,000}", querschnitt);
             String ausgabeVol = String.Format("{0:0,000}", volumen);
